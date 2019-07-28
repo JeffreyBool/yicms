@@ -2,16 +2,15 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Auth;
 use Route;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Controller as BaseController;
 
-class BaseController extends Controller
+class Controller extends BaseController
 {
 
     /**
      * 自动获取对应的模块名称和
-     * @param null $view
+     * @param null  $view
      * @param array $data
      * @param array $mergeData
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
@@ -64,7 +63,7 @@ class BaseController extends Controller
     public function getModule()
     {
         $module = Request()->route()->action['prefix'];
-        $module= explode('/',$module);
+        $module = explode('/', $module);
         return $module[1];
     }
 }

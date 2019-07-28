@@ -8,7 +8,7 @@ use App\Models\Role;
 use App\Repositories\RulesRepository;
 use Illuminate\Http\Request;
 
-class RolesController extends BaseController
+class RoleController extends Controller
 {
     /**
      * 展示所有角色

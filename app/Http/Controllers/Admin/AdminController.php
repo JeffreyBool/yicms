@@ -8,13 +8,13 @@ use App\Services\AdminsService;
 use App\Repositories\RolesRepository;
 use App\Http\Requests\Admin\AdminLoginRequest;
 
-class AdminsController extends BaseController {
+class AdminController extends Controller {
     protected $adminsService;
 
     protected $rolesRepository;
 
     /**
-     * AdminsController constructor.
+     * AdminController constructor.
      * @param AdminsService $adminsService
      * @param RolesRepository $rolesRepository
      */

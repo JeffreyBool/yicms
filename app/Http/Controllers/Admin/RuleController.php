@@ -6,12 +6,12 @@ use App\Http\Requests\Admin\RuleRequest;
 use App\Services\RulesService;
 use Illuminate\Http\Request;
 
-class RulesController extends BaseController
+class RuleController extends Controller
 {
     protected $rulesService;
 
     /**
-     * RulesController constructor.
+     * RuleController constructor.
      * @param RulesService $rulesService
      */
     public function __construct(RulesService $rulesService)

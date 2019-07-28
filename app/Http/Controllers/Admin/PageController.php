@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 
-class IndexsController extends Controller
+class PageController extends Controller
 {
     /**
      * Display a listing of the resource.

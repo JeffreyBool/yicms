@@ -5,13 +5,13 @@ namespace App\Http\Controllers\Admin;
 use App\Models\ActionLog;
 use App\Services\ActionLogsService;
 
-class ActionLogsController extends BaseController
+class ActionController extends Controller
 {
     protected $actionLogsService;
 
     /**
-     * ActionLogsController constructor.
-     * @param $actionLogsService
+     * ActionController constructor.
+     * @param ActionLogsService $actionLogsService
      */
     public function __construct(ActionLogsService $actionLogsService)
     {
@@ -25,9 +25,15 @@ class ActionLogsController extends BaseController
     {
         $actions = $this->actionLogsService->getActionLogs();
 
-        return $this->view(null,compact('actions'));
+        return $this->view(null, compact('actions'));
     }
 
+
+    /**
+     * @param ActionLog $actionLog
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Exception
+     */
     public function destroy(ActionLog $actionLog)
     {
         $actionLog->delete();
