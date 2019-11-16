@@ -9,6 +9,8 @@
 
 ## Laravel-Yicms
 
+[文档](https://jeffreybool.github.io/yicms/)
+
 基于**Laravel5.5** 开发
 
 ## 前言
